@@ -63,7 +63,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade700,
+        backgroundColor: Colors.blue.shade900,
         body: Padding(
           padding: const EdgeInsets.all(30),
           child: Column(

@@ -14,21 +14,24 @@ class _SecondState extends State<Second> {
     List data = ModalRoute.of(context)!.settings.arguments as List;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: Colors.grey,
         appBar: AppBar(
           backgroundColor: Colors.grey.shade200,
           elevation: 0,
           leading: InkWell(
-              onTap: () {
-                setState(() {
+            onTap: () {
+              setState(
+                () {
                   Navigator.pop(context);
                   data.clear();
-                });
-              },
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.black,
-              )),
+                },
+              );
+            },
+            child: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -132,7 +135,7 @@ class _SecondState extends State<Second> {
                               ),
                             ],
                           ),
-                          Text("${data[3]}", style: TextStyle(fontSize: 25)),
+                          Text("${data[3]}", style: TextStyle(fontSize: 20)),
                         ],
                       ),
                       Text(
